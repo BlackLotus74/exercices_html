@@ -1,0 +1,277 @@
+	/* couleur des titres */
+	
+	h1, h2, #films article h3{
+		color:#ed9837;
+	}
+	
+	#films h3, #related article h2{
+		color:#218E8E;
+	}
+
+	#related article h3{
+		color:#FFFFFF;
+	}	
+	
+	
+	/* margin et padding */
+	
+	#films, #related, #pageFooter{
+		padding:0% 1%;
+		margin:0;
+	}
+	
+	#mainHeader, #topImage, mainNav{
+		padding:0;
+		margin:0;
+	}
+	
+	/* on stylise le slogan */
+	
+	#mainHeader hgroup h2{
+		font:"Times New Roman", Times, serif;
+		font-style:italic;
+		margin-top:-40px;
+		margin-left:280px;
+	}
+	
+	/* on cache les titres qui servent seulement à l'outline */
+	
+	#mainHeader hgroup h1, #mainNav h1, #related h1, #social h1, #pageFooter h2{
+		position:absolute;
+		left:-10000px;
+	}
+
+	/* listes */
+	
+	#mainNav ul li, #social ul li{
+		list-style-type:none;
+		color:white;
+		text-decoration:none;
+		display:inline;
+	}
+		
+	/* menu */
+	
+	#mainNav ul{	
+		margin-top:0px;
+		padding: 10px 1%;
+	}
+
+	#mainNav ul li a{
+		padding:5px 1%;
+		text-decoration:none;
+		color:white;
+	}
+	
+	#mainNav ul li.active a{
+		color:#ed9837;
+		background:white;
+	}
+
+	/* social */
+	
+	#social ul{
+		padding:0;
+		margin:0;
+		text-align:center;
+		width:100%;
+		padding-top:10px;
+	}
+	#social {
+		clear:both;
+		}
+	
+	/* related */
+	
+	#related .randomFilmImage{
+		text-align:center;
+	}
+	
+	/* films */
+	
+	#films article{
+		clear:both;
+	}
+	
+	#films article .filmImage{
+		float:left;
+		margin-bottom:30px;
+		margin-right:1%;
+	}
+		
+	/* footer */
+	
+	#pageFooter p{
+		position:absolute;
+		margin-top:10px;
+	}
+	
+	
+	body {
+		width: 90%;
+		margin: 0 auto;
+		/*min-width: 1000px;
+		max-width: 1280px;*/
+	}
+	
+	#mainHeader{
+		height:80px;
+		background:#218e8e;
+	}
+	
+	#topImage{
+		height:280px;
+		/*background: url(../images/hollywood_1280.jpg) no-repeat center;*/
+		width: 100%;
+	}
+		
+	#mainNav{
+		height:40px;
+		background:#ed9837;
+	}
+	
+	#content{
+		display:block;  /* necessaire pour l'effet faux columns */
+		background:#f6b468;
+		overflow: hidden; /* necessaire pour l'effet faux columns */
+	}
+	
+	#films{
+		float:left;
+		width: 73%;
+		background:#ffffff;
+	}
+	
+	#related{
+		float:right;
+		width: 23%;	
+		background:#f6b468;
+	}
+	
+	#pageFooter{
+		width: 98%;
+		clear:both;
+		height:40px;
+		background:#218e8e;
+		color:white;
+	}
+	
+/*@viewport(zoom:1;)*/	
+@media only screen and (max-width:480px)
+{
+	body
+	{ 
+	width:100%;
+	}
+	#mainHeader,#mainNav
+	{ text-align:center;
+	}
+	#topImage{
+	display:none;
+	}
+	#mainHeader hgroup h2{
+	display:none;
+	}
+	.date{
+	display:none;	
+	}
+	#related{
+	background:white;
+	float:none;
+	padding:0 2%;
+	width:96%;
+	margin:auto;
+	}
+	#content{
+		width:100%;
+		
+	}
+	#related .randomFilmImage
+	{
+		margin-right:10px;
+		
+	}
+	#related article .description h3{
+	color:#ED9837;
+	}
+	#films{
+	width:100%;
+	}
+	
+	.filmImage img{
+		width:100%;
+	}
+	/*#films>h3{
+		border-bottom:1px solid #218E8E;
+		
+	}*/
+	#films:first-child h3
+	{
+		border-bottom:1px solid #218E8E;
+		margin-right:2%;
+	}
+		
+	
+	
+}	
+
+
+@media only screen and (min-width:481px) and (max-width:989px)
+{
+	body{
+		width: 100%;
+		} 
+		
+	#content{
+		background-color: white;
+		width: 100%;
+		}
+	
+	#mainHeader, #mainNav{
+		text-align: center;
+		}
+		
+	#mainNav li{
+		margin: 2% 4%;
+		}
+		
+	#mainHeader hgroup {	
+		display: none;
+		}
+
+	 #topImage{
+		 margin:auto;
+		}
+		
+	#related article{
+		background: white;
+		
+		}
+	#related{
+		width: 80%;
+		margin: auto;
+		padding: 0px;
+		background: white;
+		float: none;
+		}
+		
+	#films{
+		width: 96%;
+		margin: 0% 2%;
+		}
+		
+	#related .randomFilmImage{
+		float: left;
+		margin-right: 15px;	
+		}
+		
+	#social{
+		margin: auto;	
+		clear: both;
+		}
+		
+	#related article .description h3{
+		color: #ED9837;
+		}
+		
+	
