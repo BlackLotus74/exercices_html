@@ -152,6 +152,64 @@
 		color:white;
 	}
 
+	@media only screen and (max-width:480px){
+		
+		body{ 
+    		width:100%;
+			}
+			
+    	#mainHeader,#mainNav{ 	
+			text-align:center;
+			}
+			
+    	#topImage{
+   		 	display:none;
+			}
+			
+    	#mainHeader hgroup h2{
+    		display:none;
+			}
+			
+    	.date{
+    		display:none;
+			}
+			
+    	#related{
+    		background:white;
+    		float:none;
+    		padding:0 2%;
+    		width:96%;
+   			margin:auto;
+			}
+			
+    	#content{
+        	width:100%;
+			}
+			
+    	#related .randomFilmImage{
+        	margin-right:10px;
+			}
+			
+    	#related article .description h3{
+    		color:#ED9837;
+			}
+			
+   		 #films{
+   			 width:100%;
+    		}
+
+    	.filmImage img{
+        	width:100%;
+			}
+			
+    	#films>h3{
+        	border-bottom:1px solid #218E8E;
+			}
+			
+    	#films:first-child h3{
+        	border-bottom:1px solid #218E8E;
+        	margin-right:2%;
+    		}
 
 	@media only screen and (min-width: 481px) and (max-width: 989px){
 
