@@ -1,5 +1,56 @@
 	/* couleur des titres */
-	
+	/*body {
+		background: #444;
+	  }
+	  
+	  #toggle {
+		width: 28px;
+		height: 3px;
+		margin: 10px auto;
+	  }
+	  
+	  #toggle div {
+		width: 100%;
+		height: 5px;
+		background: white;
+		margin: 4px auto;
+		transition: all 0.3s;
+		backface-visibility: hidden;
+	  }
+	  
+	  #toggle.on .one {
+		transform: rotate(45deg) translate(5px, 5px);
+	  }
+	  
+	  #toggle.on .two {
+		opacity: 0;
+	  }
+	  
+	  #toggle.on .three {
+		transform: rotate(-45deg) translate(7px, -8px);
+	  }
+	  
+	  #menu {
+		color:black;
+		border: 1px solid black;
+		width: 150px;
+		height: 100px;
+		padding: 1px;
+		border-radius: 3px;
+		font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+		line-height: 100px;
+		text-align: center;
+		margin: auto;
+		display: none;
+	  }*/
+
+
+
+
+
+
+	  
+
 	h1, h2, #films article h3{
 		color:#ed9837;
 	}
@@ -211,8 +262,32 @@
 		margin-right:2%;
 	}
 		
-	
-	
+	/*menu version mobile*/
+
+	#mainNav ul{
+		background-color: grey;
+		position: relative;
+	}
+	#mainNav ul li{
+		display: block;  /*utilise toute la largeur*/
+		float: none;
+		background-color: grey;
+		padding: 0.3em;
+	}
+
+	#mainNav ul li:hover{
+		background-color: red;
+	}
+
+	#mainNav ul li:active{
+		background-color: green;
+	}
+
+
+
+	/*#mainNav ul li:active a{
+		background: none;
+	}*/
 }	
 
 
