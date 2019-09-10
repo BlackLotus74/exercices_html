@@ -5,7 +5,42 @@
 
 body{
     background: url(images/fondBlanc.jpg);              /*image fond*/
+    font-family:'Trebuchet MS', Arial, sans-serif;
+}
 
+#allPage{
+    display: flex;
+}
+
+#headerDiv{
+    height: 10%;
+    /*background-color: blueviolet;*/
+    /*margin-top: -3.5%;*/
+}
+
+aside{
+    background-color: black;
+}
+
+#experience{
+
+    flex-direction: column;
+    background-color: yellow;
+    display: block;
+}
+
+#competences{
+
+    flex-direction: column;
+    background-color: green;
+    display: block;
+}
+
+#formation{
+
+    flex-direction: column;
+    background-color: pink;
+    display: block;
 }
 
 h1{
@@ -31,7 +66,11 @@ h1{
 }
 
 .photoProf{
-    text-align: center;
+    /*position: absolute;*/
+    /*display: flex;
+    flex-direction: row;*/
+    align-self: flex-end;
+      
 }
 
 h2{
