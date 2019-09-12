@@ -38,8 +38,15 @@ body {
   flex-direction: row; /* affichage horizontal */
 }
 
+#navigation{
+position: relative;
+top: 0%;
+}
+
 nav {
+    display: flex;
   width: 15em;
+ 
 }
 
 .content {

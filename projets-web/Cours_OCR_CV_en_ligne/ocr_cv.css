@@ -1,46 +1,33 @@
-@font-face{
-    font-family: 'GreatVibes';
-    src: url('GreatVibes-Regular.otf');
-}
-
 body{
-    background: url(images/fondBlanc.jpg);              /*image fond*/
-    font-family:'Trebuchet MS', Arial, sans-serif;
+    margin:0;
+    background-image: url(images/fondBlanc.jpg);
 }
 
-#allPage{
+#conteneur{
     display: flex;
+    justify-content: flex-start;
+    height: 36em;
+    width: 80%;
+    margin-left: 12%;
+    margin-top: 5%;   
 }
 
-#headerDiv{
-    height: 10%;
-    /*background-color: blueviolet;*/
-    /*margin-top: -3.5%;*/
+#aside{
+    position: absolute;
+    top: 0%;
+    background-color: aqua;
+    border-radius: 20px;
+    width:11%;
+    height: 100%;
+    background-image: url(images/aside.jpg);
 }
 
-aside{
-    background-color: black;
+.experience:nth-child(1){
+    flex:1;
 }
 
-#experience{
-
-    flex-direction: column;
-    background-color: yellow;
-    display: block;
-}
-
-#competences{
-
-    flex-direction: column;
-    background-color: green;
-    display: block;
-}
-
-#formation{
-
-    flex-direction: column;
-    background-color: pink;
-    display: block;
+.competences:nth-child(2){
+    flex:2;
 }
 
 h1{
@@ -49,10 +36,10 @@ h1{
     text-shadow: 10px 5px 2px rgb(110, 221, 255);     /*ombre texte*/
     text-align: center;
     border: 2px groove black;                         /*bordure*/
-    margin: 2em;
+    margin: 1.5em;
     margin-left: 25%;
     margin-right: 25%;
-    padding: 1.3em;
+    padding: 1em;
     
     /* Animation */
   -webkit-animation: ombre ease-in infinite alternate 500ms;
@@ -60,27 +47,30 @@ h1{
   animation: ombre ease-in infinite alternate 500ms;
 }
 
-
 .intro{                                                 /*chgt alignement*/
     text-align: center;
 }
 
 .photoProf{
-    /*position: absolute;*/
-    /*display: flex;
-    flex-direction: row;*/
-    align-self: flex-end;
-      
+    position: absolute;
+    top: 0%;
+    right: 1%;
+    float: right;    
 }
 
 h2{
     color: rgb(18, 15, 199);
-    font-family: 'GreatVibes', Georgia, 'Times New Roman', Times, serif;
+    font-family: 'GreatVibes-Regular', Georgia, 'Times New Roman', Times, serif;
     text-decoration: underline;
 }
 
 h2 ul li{
     list-style: none;
+}
+
+@font-face{
+    font-family: 'GreatVibes-Regular';
+    src: url('GreatVibes-Regular.otf');
 }
 
 @-webkit-keyframes ombre {
@@ -101,7 +91,7 @@ h2 ul li{
   }
   @keyframes ombre {
     0% {
-      box-shadow: 0 0 45px rgb(1, 102, 255);
+      box-shadow: 0 0 45px rgb(11, 69, 155);
     }
     100% {
       box-shadow: 0 0 45px rgb(88, 194, 255);
