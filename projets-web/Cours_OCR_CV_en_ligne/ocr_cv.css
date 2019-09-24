@@ -1,6 +1,18 @@
-@media screen and (max-width: 1024px)
+@media all and (max-width: 1024px)
 {
+  #bloc-principal{
+    width: auto;
+  }
+
   #aside{
+    display: none;
+  }
+
+  #conteneur{
+    flex-direction: column;
+  }
+
+  .photoProf{
     display: none;
   }
 }
