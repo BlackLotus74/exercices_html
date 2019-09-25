@@ -28,7 +28,7 @@ body {
 
 [class*="col-"],
 footer {
-    background-color: lightgreen;
+    /*background-color: lightgreen;*/
     border: 2px solid black;
     border-radius: 6px;
     line-height: 40px;
@@ -79,3 +79,21 @@ footer {
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: rgb(21, 52, 156);
 }
+
+.form{
+    margin-top:10%;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#checkPerso{
+    /*background-color: greenyellow;*/
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    /*margin-bottom: 2%;*/
+}
+
+
+
