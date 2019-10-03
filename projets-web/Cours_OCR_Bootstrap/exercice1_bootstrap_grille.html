@@ -508,15 +508,17 @@
 
     <!--barre de progression + effet-->
     <div class="container">
-        <div class="progress">
+        <div class="progress progress-striped active">
             <div class="progress-bar"></div>
         </div>
+        <div id="pourcentage" class="pull-right"></div>
         <input type="button" class="btn btn-primary" id="animer" value="Animer">
     </div>
     <script src="js/jquery.js"></script>
     <script>
         function timer(n) {
             $(".progress-bar").css("width", n + "%");
+            $("#pourcentage").text(n + "%");
             if (n < 100) {
                 setTimeout(function () {
                     timer(n + 10);

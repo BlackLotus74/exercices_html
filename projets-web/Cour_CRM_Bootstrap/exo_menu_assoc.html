@@ -73,7 +73,109 @@
             <nav class="col-xs-2">
                 Menu
             </nav>
+
             <section class="col-xs-10">
+                <form role="form"  class="form-inline" id="form1" action="traitement.php" method="get" enctype="multipart/form-data">
+                    <div class="form-group" data-toggle="buttons">
+                        <label class="btn btn-primary active">
+                            <input type="radio" name="hangar" id="ouvert" autocomplete="off" checked="checked">
+                            <img src="couvert2.jpg" style="margin-left: 10px"> Ouvert
+                        </label>
+
+                        <label class="btn btn-primary">
+                            <input type="radio" name="hangar" id="fermer" autocomplete="off">
+                            <img src="choix_abrisV2.jpg" style="margin-left: 10px"> Fermer
+                        </label>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label class="form-control">Date début :</label>
+                        <input type="date" class="date-picker" id="date">
+                    </div>
+                    <br>
+
+                    <div class="form-group" data-toggle="buttons">
+                        <label class="btn btn-primary active">
+                            <input type="radio" name="typeV" id="caravane" autocomplete="off" checked="checked">
+                            caravane
+                        </label>
+
+                        <label class="btn btn-primary">
+                            <input type="radio" name="typeV" id="camping-car" autocomplete="off">
+                            camping-car
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="typeV" id="bateau" autocomplete="off" checked="checked">
+                            bateau
+                        </label>
+
+                        <label class="btn btn-primary">
+                            <input type="radio" name="typeV" id="autre" autocomplete="off">
+                            autre...
+                        </label>
+                    </div>
+                    <br>
+
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary active">
+                            <input type="checkbox" name="raccordement1" id="raccordement1" checked="checked">
+                            raccordement électrique
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="raccordement2" id="raccordement2" checked="checked">
+                            raccordement eau
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" name="raccordement0" id="raccordement0" checked="checked">
+                            aucun raccordement
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="form-group">
+                        <label class="btn btn-primary">
+                            <input type="checkbox" autocomplete="off">
+                            plus de 6 metres
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="checkbox" autocomplete="off">
+                            moins de 6 metres
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+
+
+
+                    <!--<button type="button" class="btn btn-info" data-toggle="povover" title="dispo" data-content="En fonction du nbre d eplaces disponible restantes le jour de la consultation">
+                        Verifier les disponibilités
+                    </button>-->
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#maModal">Verifier
+                        les dispo</button>
+
+                    <div class="modal" id="maModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close"><span
+                                            arai-hidden="true">&times;</span></button>Verif dispo
+                                </div>
+                                <div class="modal-body">
+                                    Places restantes
+                                </div>
+                                <div class="modal-footer"><button type="button" class="btn btn-default"
+                                        data-dismiss="modal">annuler</button><button type="button"
+                                        class="btn btn-primary" id="envoie">Envoyer les données</button>
+                                </div>
+                            </div>
+                            </dic>
+                        </div>
+
+
+                </form>
                 Section
                 <div class="row">
                     <article class="col-md-10">
@@ -154,7 +256,7 @@
 
 
 
-    
+
     <div class="container">
         <h3>Bootstrap image checkbox(multiple)</h3>
         <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
@@ -181,7 +283,7 @@
     </div>
 
     <script type="text/javascript">
-        $(".image-checkbox").each(function () {
+        /*$(".image-checkbox").each(function () {
             if ($(this).find('input[type="checkbox"]').first().attr("checked")) {
                 $(this).addClass('image-checkbox-checked');
             } else {
@@ -196,7 +298,7 @@
             $checkbox.prop("checked", !$checkbox.prop("checked"))
 
             e.preventDefault();
-        });
+        });*/
     </script>
 
     <style>
@@ -205,7 +307,7 @@
             padding-right: 0 !important;
         }
 
-        /*image gallery*/
+        /*image galery*/
         .image-checkbox {
             cursor: pointer;
             box-sizing: border-box;
@@ -215,15 +317,12 @@
             margin-bottom: 0;
             outline: 0;
         }
-
         .image-checkbox input[type="checkbox"] {
             display: none;
         }
-
         .image-checkbox-checked {
             border-color: #4783B0;
         }
-
         .image-checkbox .fa {
             position: absolute;
             color: #4A79A3;
@@ -232,17 +331,31 @@
             top: 0;
             right: 0;
         }
-
         .image-checkbox-checked .fa {
             display: block !important;
         }
     </style>
 
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="povover"]').popover()
+        })
+
+        function choisir(min, max){
+            return Math.floor(Math.random() * (max - min +1)) + min;
+        }
+        var envoyer = document.getElementById("envoie");
+        /*envoyer.addEventListener("click", function(){document.querySelector("#form1").submit();})*/
+        envoyer.addEventListener("click", function(){document.querySelector(".modal-body").innerHTML = /*.modal-body car on veut l'affichage dans le body*/
+        'nombre de places restantes : ' + choisir(100,256);});
+
+        
+
+
+    </script>
+
 </body>
 
 </html>

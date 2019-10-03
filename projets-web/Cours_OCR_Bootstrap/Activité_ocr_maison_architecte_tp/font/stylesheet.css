@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Bitter';
+    src: url('Bitter-Regular.eot');
+    src: url('Bitter-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Bitter-Regular.woff2') format('woff2'),
+        url('Bitter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
