@@ -75,7 +75,8 @@
             </nav>
 
             <section class="col-xs-10">
-                <form role="form"  class="form-inline" id="form1" action="traitement.php" method="get" enctype="multipart/form-data">
+                <form role="form" class="form-inline" id="form1" action="traitement.php" method="get"
+                    enctype="multipart/form-data">
                     <div class="form-group" data-toggle="buttons">
                         <label class="btn btn-primary active">
                             <input type="radio" name="hangar" id="ouvert" autocomplete="off" checked="checked">
@@ -232,7 +233,6 @@
     </form>
 
 
-
     <div class="form-check" id="checkPerso">
         <input class="form-check-input" type="checkbox" name="exampleRadios" id="materialChecked2" value="option1"
             checked>
@@ -252,9 +252,6 @@
             Disabled radio
         </label>
     </div>
-
-
-
 
 
     <div class="container">
@@ -317,12 +314,15 @@
             margin-bottom: 0;
             outline: 0;
         }
+
         .image-checkbox input[type="checkbox"] {
             display: none;
         }
+
         .image-checkbox-checked {
             border-color: #4783B0;
         }
+
         .image-checkbox .fa {
             position: absolute;
             color: #4A79A3;
@@ -331,6 +331,7 @@
             top: 0;
             right: 0;
         }
+
         .image-checkbox-checked .fa {
             display: block !important;
         }
@@ -343,17 +344,16 @@
             $('[data-toggle="povover"]').popover()
         })
 
-        function choisir(min, max){
-            return Math.floor(Math.random() * (max - min +1)) + min;
+        function choisir(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
         }
         var envoyer = document.getElementById("envoie");
         /*envoyer.addEventListener("click", function(){document.querySelector("#form1").submit();})*/
-        envoyer.addEventListener("click", function(){document.querySelector(".modal-body").innerHTML = /*.modal-body car on veut l'affichage dans le body*/
-        'nombre de places restantes : ' + choisir(100,256);});
-
-        
-
-
+        envoyer.addEventListener("click", function () {
+            document.querySelector(".modal-body")
+                .innerHTML = /*.modal-body car on veut l'affichage dans le body*/
+                'nombre de places restantes : ' + choisir(100, 256);
+        });
     </script>
 
 </body>
