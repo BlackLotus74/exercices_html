@@ -1,20 +1,41 @@
 .container {
   background-color: greenyellow !important;
+  /*margin-top: 0;*/
 }
 
 .right-side{
   background-color: green;
+  /*position: absolute;
+  top: -30px;*/
+
 }
+
+/*.right-side2{
+  position: absolute;
+  top: 331px;
+  right: -10px;
+  left: 0;
+  margin-left: 15px;
+  margin-top: 10px;
+}*/
 
 .left-side{
   background-color: blue !important;
+  /*position: absolute;
+  top: -30px;
+  left: 0px;*/
 }
+
 
 .footer{
   background-color: rgb(213, 213, 233) !important;
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  /*position: absolute;
+  top: 930px;
+  width: 100%;*/
+  
 }
 
 .jumbotron {
@@ -30,11 +51,10 @@
   left: 20px;
 }
 
-
 /* Styles de base */
 body {
   font-family: 'Bitter-Regular', serif;
-  background-color: rgb(255, 255, 255) !important;
+  background-color: rgb(213, 213, 233) !important;
   color: #259;
 }
 
@@ -56,26 +76,34 @@ nav img {
 
 /* Styles pour les tablettes */
 @media (min-width: 768px) {
+
+  /*.jumbotron {
+    font-family: 'Bitter-Regular', serif;
+    text-align: center;
+    background-color: rgb(213, 213, 233) !important;
+    color: rgb(34, 85, 153) !important;
+  }*/
+
   #left {
-    padding: 0;
+   
   }
 
-  #side1 {
+  /*#side1 {
     padding: 10px 5px 0 0;
   }
 
   #side2 {
     padding: 10px 0 0 5px;
-  }
+  }*/
 }
 
 /* Styles pour les écrans moyens et grands */
 @media (min-width: 992px) {
 
-  #side1,
+  /*#side1,
   #side2 {
     padding: 0 0 10px 10px;
-  }
+  }*/
 
 
 }
