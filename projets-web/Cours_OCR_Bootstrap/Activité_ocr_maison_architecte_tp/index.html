@@ -9,8 +9,6 @@
   <title>La maison de l'architecte</title>
   <meta name="description" content="Le site de la maison de l'architecture">
 
-  <link href="index.css" rel="stylesheet" type="text/css">
-
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
@@ -22,51 +20,127 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+  <style type="text/css">
+    /* Styles de base */
+    body {
+      font-family: 'Bitter', serif;
+      background-color: #eef;
+      color: #259;
+    }
+
+    nav img {
+      width: 100%;
+    }
+
+    /* Styles pour les smartphones */
+    @media (max-width: 767px) {
+
+      #left,
+      #side1,
+      #side2 {
+        padding: 10px 10px 0 10px;
+      }
+
+      .img-responsive {
+        display: none;
+      }
+
+      .jumbotron h1 {
+        /*position: relative;
+        top: 150px;*/
+        padding-top: 50px;
+        /*background-color: red;*/
+      }
+    }
+
+    /* Styles pour les tablettes */
+    @media (min-width: 768px) {
+      #left {
+        padding: 0;
+      }
+
+      #side1 {
+        padding: 10px 5px 0 0;
+      }
+
+      #side2 {
+        padding: 10px 0 0 5px;
+      }
+
+    }
+
+    /* Styles pour les écrans moyens et grands */
+    @media (min-width: 992px) {
+
+      #side1,
+      #side2 {
+        padding: 0 0 10px 10px;
+      }
+    }
+
+    .jumbotron {
+      background-color: #eef;
+      text-align: center;
+      /*background-color: red;*/
+      padding: 0.2em;
+      margin-bottom: 10px;
+    }
+
+    .jumbotron h1 {
+      position: relative;
+      top: -45px;
+    }
+
+    .img-responsive {
+      position: relative;
+      top: 30px;
+      left: -40px;
+    }
+
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .btn-md {
+      width: 48px;
+      height: 48px;
+      border-radius: 24px;
+    }
+  </style>
+
 </head>
 
 <body>
-
   <div class="container-fluid">
 
-    <header class="row">
-
-      <div class="jumbotron jumbotron-fluid col-12">
+    <div class="row">
+      <header class="jumbotron jumbotron-fluid col-12">
         <img class="img-responsive" src="assets/img/maison.png" alt="">
         <h1>La maison de l'architecte</h1>
-      </div>
-    </header>
-
-    <div class="row col-xl-12 col-lg-12">
-
-      <div class="left-side col-lg-6">
-        <a href="#"><img src="assets/img/city1.jpg" class="img-fluid" alt="Nos réalisations"></a>
-      </div>
-
-      <section class="col-xl-12 col-lg-6">
-
-        <div class="right col-xl-6">
-          <div class="right-side1">
-            <a href="#"><img src="assets/img/side1.jpg" alt="Nos projets"></a>         
-          </div>
-
-          <div class="right-side2 col-xl-6">
-            <a href="#"><img src="assets/img/side2.jpg" alt="Notre ambition"></a>
-          </div>
-
-        </div>
-
-      </section>
-
+      </header>
     </div>
 
-    <footer class="footer">
-      <div class="col-12">
-        <a class="btn btn-primary" href="#"><i class="fa fa-twitter fa-2x"></i></a>
-        <a class="btn btn-primary" href="#"><i class="fa fa-facebook fa-2x"></i></a>
-        <a class="btn btn-primary" href="#"><i class="fa fa-google-plus fa-2x"></i></a>
-        <a class="btn btn-primary" href="#"><i class="fa fa-flickr fa-2x"></i></a>
-        <a class="btn btn-primary" href="#"><i class="fa fa-spotify fa-2x"></i></a>
+
+    <nav class="row">
+      <div class="col-sm-12 col-md-8" id="left">
+        <a href="#"><img src="assets/img/city1.jpg" alt="Nos réalisations"></a>
       </div>
+      <div class="col-sm-6 col-md-4" id="side1">
+        <a href="#"><img src="assets/img/side1.jpg" alt="Nos projets"></a>
+      </div>
+      <div class="col-sm-6 col-md-4" id="side2">
+        <a href="#"><img src="assets/img/side2.jpg" alt="Notre ambition"></a>
+      </div>
+    </nav>
+
+    <footer class="footer">
+      <a class="btn btn-primary btn-md" href="#"><i class="fa fa-twitter fa-2x"></i></a>
+      <a class="btn btn-primary btn-md" href="#"><i class="fa fa-facebook fa-2x"></i></a>
+      <a class="btn btn-primary btn-md" href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+      <a class="btn btn-primary btn-md" href="#"><i class="fa fa-flickr fa-2x"></i></a>
+      <a class="btn btn-primary btn-md" href="#"><i class="fa fa-spotify fa-2x"></i></a>
     </footer>
   </div>
 
