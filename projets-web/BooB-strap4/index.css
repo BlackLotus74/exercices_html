@@ -1,0 +1,19 @@
+body{
+    background-image: url(images/image1.jpg), url(images/images1.png);
+    background-position: right top;
+    background-repeat: no-repeat, no-repeat;
+    /*background-size: cover;*/
+}
+
+video {
+    position: fixed; right:0; bottom:0;
+    width: 100%;
+    z-index: -100;
+    background: url(images/image1.jpg);
+    background-size: cover;
+    transition: 1s opacity;
+}
+.center{
+    text-align: center;
+    margin-top: 15em;
+}
