@@ -22,23 +22,6 @@ body{
     opacity: 0;
 }
 
-/*.thunder{
-    height: 10vh;
-    background: url('thunder.png');
-    animation: thunder 4s normal;
-}
-
-@keyframes thunder{
-    0%{
-        background-position: 0% 0%;
-        background-repeat: no-repeat;
-    }
-    100%{
-        background-position: 20% 100%;
-        background-repeat: no-repeat;
-    }
-}
-*/
 @keyframes rain{
     0%{
         background-position: 0% 0%;

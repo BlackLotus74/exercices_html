@@ -63,3 +63,8 @@ body{
     box-sizing: border-box;
     padding: 20px;
 }
+
+.validator{
+    text-align: center;
+    margin-top: 250px;
+}

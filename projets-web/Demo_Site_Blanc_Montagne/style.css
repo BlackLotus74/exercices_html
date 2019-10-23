@@ -1,0 +1,222 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+      grid-template-areas: "h h h"
+                           "a m m"
+                           "f f f";
+      grid-template-rows: 17% 1fr 19%;
+      grid-template-columns: 20% 1fr;
+  }  
+
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content:center; 
+}
+
+
+
+.navigation ul li{
+  list-style: none;
+  text-decoration: none;
+}
+
+.navigation ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+
+li {
+  margin-top: 25px;
+  padding: 1em;
+}
+
+li a{
+  text-decoration: none;
+}
+
+.box li a:hover{
+  color: rgb(0, 183, 255);
+  text-decoration: none;
+}
+
+  .wrapper > header {
+    grid-area: h;
+    background-color: #f5f5f5;
+    
+  }
+  
+  .wrapper > aside {
+    grid-area: a;
+    background-color: #f5f5f5;
+  }
+  
+  .wrapper > main {
+    grid-area: m;
+    background-color: #f5f5f5;
+  }
+  
+  .wrapper > .footer {
+    grid-area: f;
+    background-color: #ffffff;
+  }
+
+  .footerBtn{
+    height: 50px;
+    width: 150px;
+    margin-left: 45%;
+    margin-top: 4%;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  .img{
+
+    height: 70%;
+    width: 70%;
+    padding-right: 300px;
+    padding-top: 70px;
+
+    background-image: url("mountain.png");
+    background-size: contain;
+    background-position: right;
+    /*background-origin: border-box;*/
+    background-repeat: no-repeat;
+  }
+
+
+
+/* barre latéral du aside*/
+
+  /**,
+*:before,
+*:after {
+  box-sizing: border-box;
+}*/
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+  aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    -webkit-transform: rotate(-5deg) skew(1deg, 5deg);
+    transform: rotate(-5deg) skew(1deg, 5deg);
+  }
+  
+  .clearfix {
+    zoom: 1;
+  }
+  .clearfix:before, .clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  
+  body {
+    background: #f5f5f5;
+  }
+
+  .superbouton{
+    margin-left: -10em;
+  }
+  
+  .btnAside li{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .list-item {
+    background: rgb(247, 247, 247);
+    color: #000000;
+    text-align: center;
+    height: 2.5em;
+    width: 4em;
+    vertical-align: middle;
+    line-height: 2.5em;
+    border-bottom: 1px solid #422f2f;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    box-shadow: -2em 1.5em 0 #e1e1e1;
+    transition: all .25s linear;
+  }
+  .list-item:hover {
+    background: #070707;
+    color: #fffcfb;
+    -webkit-transform: translate(0.9em, -0.9em);
+            transform: translate(0.9em, -0.9em);
+    transition: all .25s linear;
+    box-shadow: -2em 2em 0 #e1e1e1;
+  }
+  .list-item:hover:before, .list-item:hover:after {
+    transition: all .25s linear;
+  }
+  .list-item:hover:before {
+    background: hsl(0, 3%, 56%);
+    width: 1em;
+    top: .5em;
+    left: -1em;
+  }
+  .list-item:hover:after {
+    background: #5e5b5b;
+    width: 1em;
+    bottom: -2.5em;
+    left: 1em;
+    height: 4em;
+  }
+  .list-item:before, .list-item:after {
+    content: '';
+    position: absolute;
+    transition: all .25s linear;
+    width: .5em;
+  }
+  .list-item:after {
+    height: 4em;
+    background: #181818;
+    bottom: -2.25em;
+    left: 1.5em;
+    -webkit-transform: rotate(90deg) skew(0, 45deg);
+            transform: rotate(90deg) skew(0, 45deg);
+  }
+  .list-item:before {
+    height: 2.5em;
+    background: #121212;
+    top: .25em;
+    left: -.5em;
+    -webkit-transform: skewY(-45deg);
+            transform: skewY(-45deg);
+  }
+
+  @media screen and (max-width: 900px){
+    .superbouton{
+      display: none;
+      
+    }
+  }
+
+  @media screen and (max-width: 1200px){
+    .superbouton{
+       margin-left: -4em;
+    }
+  }
