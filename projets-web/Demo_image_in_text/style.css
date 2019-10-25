@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background: #333;
+}
+
+ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+ul li{
+    list-style: none;
+    font-size: 250px;
+    font-weight: 900;
+    letter-spacing: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    margin: 0;
+    background: url('annecy02.jpg') 0 -50%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moove1 0s linear;
+}
+
+ul li:nth-child(1){
+    animation-delay: .1s;
+    background: url('annecy01.jpg') 0 -50%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moove1 1s linear;
+}
+ul li:nth-child(2){
+    animation-delay: .2s;
+    background: url('annecy02.jpg') 0 -50%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moove1 1.2s linear;
+}
+ul li:nth-child(3){
+    animation-delay: .3s;
+    background: url('annecy03.jpg') 0 -50%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moove1 1.4s linear;
+}
+ul li:nth-child(4){
+    animation-delay: .4s;
+    background: url('annecy04.jpg') 0 -50%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moove1 1.6s linear;
+}
+ul li:nth-child(5){
+    animation-delay: .5s;
+    background: url('annecy05.jpg') 0 -50%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moove1 1.8s linear;
+}
+ul li:nth-child(5){
+    animation-delay: .6s;
+    background: url('annecy06.jpg') 0 -50%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moove1 2s linear;
+}
+ul li:nth-child(6){
+    animation-delay: .6s;
+    background: url('annecy07.jpg') 0 -50%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moove1 2.2s linear;
+}
+
+
+h1{
+    font-size: 250px;
+    font-weight: 900;
+    letter-spacing: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    margin: 0;
+    /*background: url('annecy02.jpg') 0 -50%;*/
+    background: url('annecy02.jpg') 0 -50%;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: moove1 10s linear;
+}
+
+@keyframes moove1{
+    0%{
+        background: url('annecy02.jpg') 0 -50%;
+        background-size: cover;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    100%{
+        background: url('annecy02.jpg') 0 -157%;
+        background-size: cover;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }   
+}
+
+ 
