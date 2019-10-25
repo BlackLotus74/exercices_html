@@ -1,5 +1,7 @@
 
-
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -104,53 +106,71 @@ body {
   }
 
   .logo{
+    background-color: red !important;
     position: relative;
-    height: 70%;
-    width: 70%;
-    padding-right: 300px;
-    padding-top: 70px;
+    float:right;
     margin-top: 5%;
+    margin-right: 10%;
+    height: 80%;
+    width: 50%;
 
-    background-image: url("stickerPerso.png");
-    background-size: contain;
+    background-image: url("NewSticker.jpg");
+    background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
     filter: brightness(120%);
+    overflow: hidden;
   }
+
+  .logo img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index:100;
+  }
+
 
   .star{
-    /*background-color: red !important;*/
-    position: absolute;
-    top:-10vh;
-    bottom:0;
-    left:50vw;
-    right:0;
-    margin: auto;
-    width: 500px;
-    height: 500px;
-    transform: rotateY(180deg) scale(.12);
-    animation: motion 15s infinite linear;
+    width:100%;
+    height:70%;
+    transform:  scale(.12);
+    animation: motionPlus 30s linear ;
+    opacity: 0; /*pour que l'element soit invisible a l'etat d'origine de l anim*/
+    background: url('starfighter.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
+    animation-delay: 2s;
+  }
 
+  .star2{
+    width:100%;
+    height:100%;
+    transform:  scale(.12);
+    animation: motionPlus2 20s linear ;
+    opacity: 0; /*pour que l'element soit invisible a l'etat d'origine de l anim*/
     background: url('starwars.png');
     background-repeat: no-repeat;
-
-    background-size: cover;
-    overflow: hidden;
-
+    background-position-x: center;
+    background-size: contain;
+    
+    padding: 20px 20px 20px 20px;
   }
 
-  /*@keyframes motion{
-      0%{margin-left: 0%;background-position: 0% 0%;}
-      50%{margin-left: 50%;background-position: 50% 50%; }
-      100%{margin-left: 100%;background-position: 100%;}
-  }*/
-
-  @keyframes motion{
-    0%{transform: translateX(0) rotateY(180deg) scale(0.2);}
-    50%{transform: translateX(0) rotateY(180deg) scale(1);}
-    100%{transform: translateX(16px) rotateY(180deg) scale(1.5);}
-
+  @keyframes motionPlus{
+      0%{margin-left: -20%; margin-top: 0%;opacity: 1; transform: scale(0.01);}
+      25%{margin-left: 5%; margin-top: 10%;opacity: 1; transform: scale(0.1);}
+      55%{margin-left: 50%; margin-top:25%;opacity: 1; transform: scale(1); transform:rotate(-30deg);}
+      100%{margin-left: -20%; margin-top: 25%; opacity: 0.95; transform: scale(3);}
   }
+  @keyframes motionPlus2{
+    0%{margin-left: 0%; margin-top:-50%;opacity: 1; transform: scale(0.5);}
+    /*25%{margin-left: 5%; margin-top: 10%;opacity: 1; transform: scale(0.1);}
+    55%{margin-left: 50%; margin-top:25%;opacity: 1; transform: scale(1); transform:rotate(-30deg);}*/
+    100%{margin-left: 0%; margin-top: 0%; opacity: 0.8; transform: scale(1.5);}
+}
 
   .name{
       position: absolute;
