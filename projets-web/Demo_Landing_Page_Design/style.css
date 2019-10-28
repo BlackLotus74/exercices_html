@@ -69,10 +69,12 @@ section{
     transform-origin: left;
     text-transform: uppercase;
     transform: scaleX(1);
+    animation: revealTextReverse 1s ease-in-out forwards;
 }
 
 .bannerText h2{
     font-size: 6em;
+    animation-delay: 2s;
 }
 
 .bannerText h3{
@@ -90,5 +92,20 @@ section{
     height: 100%;
     transform-origin: right;
     animation: revealText 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.bannerText h3:before{
+    animation-delay: 4s;
+}
+
+@keyframes revealText {
+    from{transform: scaleX(1);}
+    to{transform: scaleX(0);}
+}
+
+@keyframes revealTextReverse {
+    from{transform: scaleX(0);}
+    to{transform: scaleX(1);}
 }
 
