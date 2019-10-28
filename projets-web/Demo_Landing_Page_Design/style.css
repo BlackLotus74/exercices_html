@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.open{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.open .layer{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: top; /*sens du glissement de l anim*/
+    animation: open 1s ease-in-out forwards;
+}
+
+.open .layer:nth-child(1){
+    background: #000;
+    z-index: 2;
+}
+.open .layer:nth-child(2){
+    background: #03a9f4;
+    animation-delay: 1s;
+    z-index: 1;
+}
+
+@keyframes open{
+    0%{transform: scaleY(1);}
+    100%{transform: scaleY(0);}
+}
+
+section{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerText{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 700px;
+}
+
+.bannerText h2,
+.bannerText h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    transform-origin: left;
+    text-transform: uppercase;
+    transform: scaleX(1);
+}
+
+.bannerText h2{
+    font-size: 6em;
+}
+
+.bannerText h3{
+    font-size: 3em;
+}
+
+.bannerText h2:before,
+.bannerText h3:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    animation: revealText 1s ease-in-out forwards;
+}
+
