@@ -18,7 +18,8 @@
     <section>
         <div class="header">
             <h2 class="logo">Your Logo</h2>
-            <ul>
+            <i class="fa fa-bars x2" onclick="menuToggle()"></i>
+            <ul id="navigation">
                 <li>
                     <a href="#" class="active">Home</a>
                 </li>
@@ -37,6 +38,7 @@
                 <li>
                     <a href="#">Contact</a>
                 </li>
+                <i class="fa fa-times x2" onclick="menuToggle()"></i>
             </ul>
         </div>
         <div class="bannerText">
@@ -50,7 +52,9 @@
                 Praesent aliquam mattis odio, in ullamcorper lacus.</p>
             <a class="read-more" href="#">Read More</a>
         </div>
-        <img src="bulb02.png" class="bulb">
+
+        <img src="bulb03.png" class="bulb">
+        
         <ul class="sci">
             <li><a href="#"><i class="fa
              fa-facebook"></i></a></li>
@@ -61,7 +65,15 @@
             <li><a href="#"><i class="fa
             fa-instagram"></i></a></li>
         </ul>
+        <div class="element1"></div>
+        <div class="element2"></div>
     </section>
+    <script type="text/javascript">
+        function menuToggle(){
+            var element = document.getElementById("navigation");
+            element.classList.toggle("show");
+        }
+    </script>
 </body>
 
 </html>
