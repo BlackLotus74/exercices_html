@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background: url(bg06.jpg);
+    background-size: cover;
+    height: 930px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container img{
+    width: 100%;
+}
+
+.container .cloud1{
+    position: absolute;
+    top: -100px;
+    animation: cloudOne 120s linear infinite;
+}
+
+.container .cloud2{
+    position: absolute;
+    top: -50px;
+    animation: cloudOne 75s linear infinite;
+}
+
+.container .cloud2 .saturate{
+    filter: saturate(12); 
+}
+
+.container .cloud5 .huerotate { filter: hue-rotate(180deg); }
+
+.container .cloud3{
+    position: absolute;
+    top: 200px;
+    animation: cloudOne 125s linear infinite;
+    color: pink;
+}
+
+.container .cloud4{
+    position: absolute;
+    top: -100px;
+    animation: cloudOne 80s linear infinite;
+}
+
+.container .cloud5{
+    position: absolute;
+    top: 0;
+    animation: cloudOne 135s linear infinite;
+}
+
+@keyframes cloudOne{
+    0%{ transform: translateX(-100%);}
+    100%{ transform: translateX(100%); }
+}
+
+@keyframes cloudTwo{
+    0%{ transform: translateX(-100%);}
+    100%{ transform: translateX(100%); }
+}
+
+@keyframes cloudThree{
+    0%{ transform: translateX(-100%);}
+    100%{ transform: translateX(100%); }
+}
+
+@keyframes cloudFour{
+    0%{ transform: translateX(-100%);}
+    100%{ transform: translateX(100%); }
+}
+
+@keyframes cloudFive{
+    0%{ transform: translateX(-100%);}
+    100%{ transform: translateX(100%); }
+}

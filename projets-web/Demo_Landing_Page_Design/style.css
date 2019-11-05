@@ -179,7 +179,7 @@ section .bannerText{
     left: 0;
     width: 100%;
     height: 80px;
-    padding: 0 100px;
+    padding: 0 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -246,7 +246,6 @@ section .bannerText{
     animation-delay: 6.25s;  
 }
 
-
 .header ul li:last-child{
     margin-right: 0;
 }
@@ -271,7 +270,6 @@ section .bannerText{
     0%{transform: translateX(150px); opacity: 0;}
     100%{transform: translateX(0); opacity: 1;}
 }
-
 
 .sci{
     position: absolute;
@@ -354,6 +352,22 @@ section .bannerText{
     .sci{
         z-index: 1002;
         right: 20px;
+    }
+    .header{
+        padding: 0 10%;
+    }
+    .element1{
+        opacity: 0;
+        position: absolute;
+        bottom: -145px;
+        right: 13%;
+        width: 250px;
+        height: 250px;
+        border: 40px solid #000;
+        border-radius: 25%;
+        animation: rotate 40s linear infinite, 
+               fadeIn 1s linear forwards;
+        animation-delay: 7s;
     }
 }
 
