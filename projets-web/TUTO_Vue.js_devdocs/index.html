@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tuto Vue.js</title>
+    <!--<script src="https://unpkg.com/vue"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        {{message}}
+    </div>
+
+    <div id="app-2">
+        <span v-bind:title="message">   <!-- appelé directive (préfixé avec v-)-->
+            Hover your mouse over me for a few seconds
+            to see my dynamically bound title!
+        </span>
+    </div>
+
+    <div id="app-3">
+        <span v-if="seen">Now you see me</span>
+    </div>
+
+    <div class="app-4">
+        <ol>
+            <li v-for="todo in todos">  <!--(v-for directive used for displaying a list of items using the data from an Array)-->
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <div class="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse message</button>  <!--(let users interact with your app, use the v-on directive to attach event listeners that invoke methods on our Vue instances:)-->
+    </div>
+
+    <div class="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">  <!--v-model directive that makes two-way binding between form input and app state a breeze:-->
+    </div>
+
+    <ol>
+        <!--Create an instance of the todo-item component-->
+        <todo-item></todo-item>
+    </ol>
+
+    <div class="app-7">
+        <ol>
+            <!--
+            Now we provide each todo-item with the todo object
+            it's representing, so that its content can be dynamic.
+            We also need to provide each component with a "key",
+            which will be explained later.
+            -->
+            <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+            ></todo-item>
+        </ol>
+    </div>
+
+    
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+
+        var app2 = new Vue({
+            el: '#app-2',
+            data: {
+                message: 'You loaded this page on ' + new Date().toLocaleTimeString()
+            }
+        })
+
+        var app3 = new Vue({
+            el: '#app-3',
+            data: {
+                seen: true
+            }
+        })
+
+        var app4 = new Vue({
+            el: '.app-4',
+            data: {
+                todos: [
+                    { text: 'learn JavaScript' },
+                    { text: 'learn Vue' },
+                    { text: 'Build something awesome' }
+                ]
+            }
+        })
+
+        var app5 = new Vue({
+            el: '.app-5',
+            data: {
+                message: 'Hello Vue.js!'
+            },
+            methods: {
+                reverseMessage: function (){
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        })
+
+        var app6 = new Vue({
+            el: '.app-6',
+            data: {
+                message: 'salut terus!'
+            }
+        })
+
+        // Define a new component called todo-item
+        Vue.component('todo-item', {
+            // The todo-item component now accepts a
+            // "prop", which is like a custom attribute.
+            // This prop is called todo.
+            props: ['todo'],
+            template: '<li>{{ todo.text }}</li>'
+        })
+
+        var app7 = new Vue({
+            el: '.app-7',
+            data: {
+                groceryList: [
+                    { id: 0, text: 'Vegetables' },
+                    { id: 1, text: 'cheese' },
+                    { id: 2, text: 'humans are stupids'}
+                ]
+            }
+        })
+
+
+
+    </script>   
+</body>
+</html>

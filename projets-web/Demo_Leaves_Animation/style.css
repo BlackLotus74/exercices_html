@@ -101,5 +101,24 @@ section{
 }
 
 .set2{
-    transform: scale(2) rotateY(18deg);
+    transform: scale(2) rotateY(180deg);
+    filter: blur(2px);
+}
+
+.set3{
+    transform: scale(0.8) rotateX(180deg);
+    filter: blur(4px);
+}
+
+h2{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 8em;
+    font-family: sans-serif;
 }

@@ -1,0 +1,54 @@
+body{
+    font-family: tahoma;
+    text-transform: uppercase;
+    background: deepskyblue;
+    height: 100%;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 35px;
+    text-align: center;
+}
+
+.layer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.9s;
+    transform: perspective(900px) scale(1) translateX(0) rotateY(0);
+    transform-style: preserve-3d;
+}
+
+nav{
+    vertical-align: middle;
+}
+
+nav ul{
+    padding-left: 70%;
+    font-size: larger;
+    line-height: 2;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.front{
+    background: white;
+}
+
+body:hover .front{
+    margin-left: 10%;
+    transform: perspective(700px) scale(0.5) translateX(-17.77%) rotateY(25deg) ;
+}
+
+ol,ul{
+    list-style: none;
+}
