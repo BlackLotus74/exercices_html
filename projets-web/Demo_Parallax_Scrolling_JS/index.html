@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Parallax scrolling effect pure JS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  type="text/css" href="style.css">
 </head>
 <body>
     <section class="zoom">
@@ -20,5 +20,35 @@
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </section>
+
+    <script type="text/javascript">
+
+        var layer1 = document.querySelector('#layer1')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', function (e){
+            var offset = window.pageYOffset;
+            scroll = offset;
+            layer1.style.width = (100 + scroll/5) + '%';
+        });
+
+        var layer2 = document.querySelector('#layer2')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', function (e){
+            var offset = window.pageYOffset;
+            scroll = offset;
+            layer2.style.width = (100 + scroll/5) + '%';
+            layer2.style.left = scroll/50 + '%';
+        });
+
+        var text = document.querySelector('#text')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', function (e){
+            var offset = window.pageYOffset;
+            scroll = offset;
+            layer2.style.width = (100 + scroll/5) + '%';
+            text.style.top = - scroll/20 + '%';
+        });
+    </script>
+
 </body>
 </html>
