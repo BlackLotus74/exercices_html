@@ -1,0 +1,243 @@
+.loading {
+    --load: 10000ms;
+    --border: #646B8C;
+    --background: #fff;
+    --background-perspective: #F6F8FF;
+    --active: #5C86FF;
+    margin: 52px 0;
+  }
+  .loading > div {
+    -webkit-transform: perspective(var(--p, 0)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+            transform: perspective(var(--p, 0)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;
+  }
+  .loading > div span {
+    display: block;
+    color: var(--c, #404660);
+    line-height: 23px;
+    font-size: var(--s, 16px);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .loading > div span:nth-child(2) {
+    --c: #BBC1E1;
+    --s: 14px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+  }
+  .loading > div ul {
+    width: 360px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .loading > div ul li {
+    --ry: 0deg;
+    --z: 0;
+    --x: 0;
+    position: absolute;
+    bottom: 0;
+    background: var(--b, var(--background));
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    width: var(--w, 200px);
+    left: var(--l, 0);
+    height: 36px;
+    -webkit-transform: rotateY(var(--ry)) translateZ(var(--z)) translateX(var(--x));
+            transform: rotateY(var(--ry)) translateZ(var(--z)) translateX(var(--x));
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+  }
+  .loading > div ul li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--active);
+    -webkit-transform-origin: var(--o, 0) 0;
+            transform-origin: var(--o, 0) 0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-animation: fill var(--duration) linear forwards var(--delay);
+            animation: fill var(--duration) linear forwards var(--delay);
+  }
+  .loading > div ul li:nth-child(1) {
+    --delay: 0ms;
+    --duration: calc(var(--load) * calc(200 / 960));
+    border-left: 1px solid var(--border);
+  }
+  .loading > div ul li:nth-child(2) {
+    --delay: calc(var(--load) * calc(200 / 960));
+    --duration: calc(var(--load) * calc(100 / 960));
+    --w: 100px;
+    --l: 200px;
+    --ry: 90deg;
+    --b: var(--background-perspective);
+  }
+  .loading > div ul li:nth-child(3) {
+    --delay: calc(calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(100 / 960)));
+    --duration: calc(var(--load) * calc(32 / 960));
+    --w: 32px;
+    --l: 200px;
+    --z: -100px;
+  }
+  .loading > div ul li:nth-child(4) {
+    --delay: calc(calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(32 / 960)));
+    --duration: calc(var(--load) * calc(100 / 960));
+    --w: 100px;
+    --l: 232px;
+    --ry: 90deg;
+    --o: 100%;
+    --b: var(--background-perspective);
+  }
+  .loading > div ul li:nth-child(5) {
+    --delay: calc(calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(32 / 960)) + calc(var(--load) * calc(100 / 960)));
+    --duration: calc(var(--load) * calc(20 / 960));
+    --w: 20px;
+    --l: 232px;
+  }
+  .loading > div ul li:nth-child(6) {
+    --delay: calc(calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(32 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(20 / 960)));
+    --duration: calc(var(--load) * calc(140 / 960));
+    --w: 140px;
+    --l: 252px;
+    --ry: 90deg;
+    --b: var(--background-perspective);
+  }
+  .loading > div ul li:nth-child(7) {
+    --delay: calc(calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(32 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(20 / 960)) + calc(var(--load) * calc(140 / 960)));
+    --duration: calc(var(--load) * calc(24 / 960));
+    --w: 24px;
+    --l: 252px;
+    --z: -140px;
+  }
+  .loading > div ul li:nth-child(8) {
+    --delay: calc(calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(32 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(20 / 960)) + calc(var(--load) * calc(140 / 960)) + calc(var(--load) * calc(24 / 960)));
+    --duration: calc(var(--load) * calc(200 / 960));
+    --w: 200px;
+    --l: 276px;
+    --ry: 90deg;
+    --x: -60px;
+    --o: 100%;
+    --b: var(--background-perspective);
+  }
+  .loading > div ul li:nth-child(9) {
+    --delay: calc(calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(32 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(20 / 960)) + calc(var(--load) * calc(140 / 960)) + calc(var(--load) * calc(24 / 960)) + calc(var(--load) * calc(200 / 960)));
+    --duration: calc(var(--load) * calc(48 / 960));
+    --w: 48px;
+    --l: 276px;
+    --z: 60px;
+  }
+  .loading > div ul li:nth-child(10) {
+    --delay: calc(calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(32 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(20 / 960)) + calc(var(--load) * calc(140 / 960)) + calc(var(--load) * calc(24 / 960)) + calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(48 / 960)));
+    --duration: calc(var(--load) * calc(60 / 960));
+    --w: 60px;
+    --l: 324px;
+    --ry: 90deg;
+    --x: -60px;
+    --b: var(--background-perspective);
+  }
+  .loading > div ul li:nth-child(11) {
+    --delay: calc(calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(32 / 960)) + calc(var(--load) * calc(100 / 960)) + calc(var(--load) * calc(20 / 960)) + calc(var(--load) * calc(140 / 960)) + calc(var(--load) * calc(24 / 960)) + calc(var(--load) * calc(200 / 960)) + calc(var(--load) * calc(48 / 960)) + calc(var(--load) * calc(60 / 960)));
+    --duration: calc(var(--load) * calc(36 / 960));
+    --w: 36px;
+    --l: 324px;
+    border-right: 1px solid var(--border);
+  }
+  .loading input {
+    display: none;
+  }
+  .loading input:checked + div {
+    --rx: -16deg;
+    --ry: -24deg;
+    --p: 600px;
+  }
+  
+  @-webkit-keyframes fill {
+    to {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+  }
+  
+  @keyframes fill {
+    to {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+  }
+  .restart {
+    display: table;
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    text-decoration: none;
+    line-height: 23px;
+    color: #BBC1E1;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .restart svg {
+    margin: 4px 4px 0 0;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+  *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Roboto', Arial;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #F6F8FF;
+  }
+  body .dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+  }
+  body .dribbble img {
+    display: block;
+    height: 28px;
+  }
+  body .twitter {
+    position: fixed;
+    display: block;
+    right: 64px;
+    bottom: 14px;
+  }
+  body .twitter svg {
+    width: 32px;
+    height: 32px;
+    fill: #1da1f2;
+  }
+  
