@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Full-Page Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Navigation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+</head>
+
+<body>
+
+    <svg viewBox="0 0 100 80" class="im-a-hamburger">
+        <rect width="100" height="20"></rect>
+        <rect y="30" width="100" height="20"></rect>
+        <rect y="60" width="100" height="20"></rect>
+    </svg>
+
+    <main>
+        <div class="background-blobs">
+            <svg id="Blob_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2270 654">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: url(#linear-gradient);
+                        }
+                    </style>
+                    <linearGradient id="linear-gradient" x1="245.63" y1="737.2" x2="1097.27" y2="-614.44"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0.38" stop-color="hsla(232,85%,41%,1)" />
+                        <stop offset="1" stop-color="hsla(250,66%,20%,1)" />
+                    </linearGradient>
+                </defs>
+                <title>Untitled-1</title>
+                <path class="cls-1"
+                    d="M2011-100.71C1989.31-70.81,1948.7-25,1882.4,4.91c-57.57,26-109.62,28.75-138.58,30-83.44,3.67-85.67-20.27-158.55-15.56-69.93,4.52-81.51,27.45-174.92,37.8-31.45,3.49-58.42,4-96.59,3.12-158.59-3.74-228.36-25.65-308.66-27.58-167.51-4-161.63,84.58-360.54,105.62C464,157.44,396.64,91.09,318.07,147.23,246.51,198.35,286,265.11,204.15,358.48c-11.68,13.32-131.41,145.9-276,113.41C-169.49,450-232.28,363.11-251.52,288.44c0,0-35.2-109.41,47.13-229C44.51-302.32,1527.26-155.79,2011-100.71Z"
+                    transform="translate(259 177)" />
+            </svg>
+        </div>
+        <div class="header-text">
+            <h1>Creativity</h1>
+            <h3>The use of imagination or original ideas to create something amazing</h3>
+        </div>
+    </main>
+
+    <div class="navigation">
+        <div class="overlay"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" id="navigation-background">
+            <path class="a morph-path"
+                d="M1694.17,69.11c-21.15,46.26-57.31,104.06-118,123-36,11.22-57.7,1.67-115-2-89.29-5.71-118,12.26-213,21-104.64,9.63-124.51-7.14-234-8-98.87-.77-238-1.86-366,60-154.3,74.55-131.59,162.75-270,216-133.46,51.34-315.11,31.11-364-60-39.85-74.25,18.49-176.94,35-206C234-112.21,1335,19.57,1694.17,69.11Z" />
+            </svg>
+        <nav>
+            <ul>
+                <li data-item="home"><a href="#0">Home</a></li>
+                <li data-item="about"><a href="#0">About</a></li>
+                <li data-item="contact"><a href="#0">Contact</a></li>
+                <li data-item="dance"><a href="#0">Dance</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>

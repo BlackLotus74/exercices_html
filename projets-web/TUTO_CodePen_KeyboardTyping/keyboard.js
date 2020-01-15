@@ -1,5 +1,5 @@
 
-Window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function() {
 
     const m = document.querySelector("#m");
     const k = document.querySelector("#k");

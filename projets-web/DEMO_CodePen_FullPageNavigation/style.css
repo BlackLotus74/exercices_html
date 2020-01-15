@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Merriweather|Open+Sans&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #101010;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  width: calc(100% - 40px);
+  height: 50px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+header .logo {
+  flex: 1 1 100px;
+}
+
+.im-a-hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 300;
+  flex: 0 0 20px;
+  width: 20px;
+  fill: #feecd2;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+main .background-blobs svg {
+  position: absolute;
+  top: -10%;
+  left: -20%;
+  right: -20%;
+  width: 1920px;
+  height: auto;
+  filter: drop-shadow(22px 22px 0px rgba(16, 39, 193, 0.3));
+  opacity: 0.2;
+}
+main .header-text {
+  width: 1300px;
+}
+main .header-text h1 {
+  font-family: 'Archivo Black', 'Arial Black', sans-serif;
+  font-size: 240px;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(transparent, transparent), url("https://image.freepik.com/free-vector/earth-view-night-from-alien-planet-neon-space_33099-1876.jpg") repeat;
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-overflow: hidden;
+}
+main .header-text h3 {
+  font-family: 'Merriweather', 'Times New Roman', sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: 80%;
+  padding: 0 10%;
+  line-height: 72px;
+  text-align: center;
+  margin-top: -80px;
+  color: #fafafa;
+}
+
+.navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 205;
+}
+.navigation.open {
+  display: block;
+}
+.navigation .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+.navigation #navigation-background {
+  width: 180vw;
+  height: 170vh;
+  position: fixed;
+  top: -70vh;
+  left: -50vw;
+  z-index: 210;
+}
+.navigation #navigation-background .morph-path {
+  fill: rgba(41, 38, 130, 0.65);
+  transition: fill 0.5s ease-in-out;
+}
+.navigation nav {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  z-index: 220;
+}
+.navigation nav.open {
+  display: block;
+}
+.navigation nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation nav ul li {
+  padding: 5px 50px;
+  line-height: 60px;
+  font-family: 'Open Sans', 'Arial Black', sans-serif;
+  font-size: 40px;
+  margin: 20px 0;
+}
+.navigation nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.navigation nav ul li a:hover {
+  background-image: linear-gradient(180deg, transparent 90%, rgba(218, 214, 245, 0.5) 0);
+}
