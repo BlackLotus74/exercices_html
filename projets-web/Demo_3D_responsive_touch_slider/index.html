@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D responsive touch slider</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="François.jpg">
+                </div>
+                <div class="content">
+                    <h2>François lancian<br><span>Web Developper</span></h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="President.jpg">
+                </div>
+                <div class="content">
+                    <h2>Johnny Charvet<br><span>President</span></h2>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="Bastien.jpg">
+                </div>
+                <div class="content">
+                    <h2>Bastien Peromet<br><span>Nutritioniste</span></h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="Franck.jpg">
+                </div>
+                <div class="content">
+                    <h2>Franck Chatelot<br><span>Formateur</span></h2>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script type="text/javascript">
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'cube',
+                grabCursor: true,
+                cubeEffect: {
+                    shadow: true,
+                    slideShadows: true,
+                    shadowOffset: 20,
+                    shadowScale: 0.94,
+                }
+            });
+        </script>
+</body>
+
+</html>
