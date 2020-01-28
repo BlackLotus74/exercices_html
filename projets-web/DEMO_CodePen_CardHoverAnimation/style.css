@@ -1,0 +1,37 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  body {
+    display: flex;
+    background: url(https://pbs.twimg.com/media/DySLFjlV4AEWf_F.jpg) no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+  
+  .container {
+    margin: auto;
+    perspective: 1000px;
+  }
+  
+  .card {
+    height: 25vw;
+    width: 15vw;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .25s linear;
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .container:hover .card {
+    box-shadow: 10px 30px 50px -6px black;
+  }
+  
