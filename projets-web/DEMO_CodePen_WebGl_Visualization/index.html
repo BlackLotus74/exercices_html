@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebGl avion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="avion.js"></script>
+</head>
+
+<body>
+
+    <div id="content">
+
+        <!-- canvas -->
+        <div id="paint"></div>
+
+        <!-- text -->
+        <div id="wrapper">
+            <div class="flex">
+
+                <div id="controls">
+                    <button class="one">Business class</button>
+                    <button class="two">Ahead of wing</button>
+                    <button class="three">Over the wing</button>
+                    <button class="four">Rear cabin</button>
+                    <label class="option">360 view<input type="checkbox" id="myCheck"></label>
+                </div>
+
+                <section id="text">
+                    <h1>Survival rates in commercial jet crashes, by seat position.</h1>
+                    <p>According to an analysis of all commercial jet crashes in the United States since 1971, In 11 of
+                        the 20 crashes that involved both fatalities and survivors, <span class="high">rear passengers
+                            had a 69% chance of survival</span> than those compared to a less favorable <span>49%</span>
+                        in business class. </p>
+                    <small>source: <br>
+                        <a href="https://www.statista.com/chart/9805/which-plane-seats-are-safest/"
+                            target="_blank">Statista</a><br>
+                        <a href="https://www.popularmechanics.com/flight/a1918/4219452/" target="_blank">Popular
+                            Mechanics</a></small>
+                </section>
+
+            </div>
+        </div><!-- /text -->
+
+    </div>
+
+    <!-- numbers -->
+    <canvas id="number" width="100%" height="100%"></canvas>
+    <canvas id="number2" width="100%" height="100%"></canvas>
+    <canvas id="number3" width="100%" height="100%"></canvas>
+    <canvas id="number4" width="100%" height="100%"></canvas>
+
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
+    <script src="http://baronwatts.com/scripts/LegacyJSONLoader.js"></script>
+    <script src="https://threejs.org/examples/js/controls/DeviceOrientationControls.js"></script>
+    <script src="https://threejs.org/examples/js/effects/StereoEffect.js"></script>
+    <!-- tweenmax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.2/TweenMax.min.js"></script>
+</body>
+
+</html>
