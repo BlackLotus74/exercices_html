@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    perspective: 325px;
+  }
+  .cube {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -400px 0 0 -400px;
+    transform-style: preserve-3d;
+    transform: translate3d(0px, 0px, 325px) rotateX(0deg) rotateY(0deg);
+    animation: spin 15s linear infinite;
+  }
+  .cube > div {
+    background-color: #000;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-style: preserve-3d;
+  }
+  
+  .cube .cube-front {
+    transform: translateZ(-398px);
+  }
+  .cube .cube-back {
+    transform: rotateY(180deg) translateZ(-398px);
+  }
+  .cube .cube-left {
+    transform: rotateY(90deg) translateZ(-398px);
+  }
+  .cube .cube-right {
+    transform: rotateY(-90deg) translateZ(-398px);
+  }
+  .cube .cube-top {
+    transform: rotateX(-90deg) translateZ(-398px);
+  }
+  .cube .cube-bottom {
+    transform: rotateX(90deg) translateZ(-398px);
+  }
+  
+  
+  @keyframes spin {
+    0% {
+      transform: translate3d(0px, 0px, 325px) rotateX(0deg) rotateY(0deg);
+    }
+    33% {
+      transform: translate3d(0px, 0px, 325px) rotateX(40deg) rotateY(120deg);
+    }
+    67% {
+      transform: translate3d(0px, 0px, 325px) rotateX(-30deg) rotateY(240deg);
+    }
+    100% {
+      transform: translate3d(0px, 0px, 325px) rotateX(0deg) rotateY(360deg);
+    }
+  }

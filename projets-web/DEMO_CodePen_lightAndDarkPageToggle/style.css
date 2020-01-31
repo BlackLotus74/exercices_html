@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo");
+body {
+  transition: all 300ms ease;
+}
+body.dark {
+  background-color: #161D26;
+}
+
+.toggle {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  width: 60px;
+}
+.toggle .mask {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+.toggle .mask .icon-wrap {
+  padding: 15px;
+  transition: all 300ms 400ms ease;
+}
+.toggle .mask .icon-wrap:last-child {
+  transform: translatey(-60px);
+}
+.toggle .mask .icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.toggle .mask .active {
+  transition-delay: 100ms;
+}
+.toggle .mask .active:first-child {
+  transform: translatey(60px);
+}
+.toggle .mask .active:last-child {
+  transform: translatey(0);
+}
+.toggle .mask .sun {
+  background-color: #fff;
+}
+.toggle .mask .moon {
+  background-color: #283445;
+}
+.toggle .bar {
+  width: 40%;
+  height: 5px;
+  margin: 0 auto;
+  background-color: #283445;
+  transition: all 300ms 100ms ease;
+}
+.toggle .bar.dark {
+  background-color: #fff;
+}
+
+.page-content {
+  max-width: 888px;
+  margin: 60px auto;
+  padding: 60px;
+}
+.page-content h1, .page-content p {
+  transition: all 300ms ease;
+}
+.page-content h1 {
+  font-family: "Nanum Myeongjo", serif;
+  padding: 45px 0;
+  font-size: 3.5em;
+}
+.page-content p {
+  font-family: "Nanum Gothic", sans-serif;
+  padding: 0 0 30px 0;
+  font-size: 1em;
+  line-height: 2em;
+}
+.page-content .hero {
+  width: 100%;
+  height: 550px;
+  background-image: url("https://images.unsplash.com/photo-1520545221203-f6ca6a8e3252?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=c31c8f886e5b75e9eb1a12c180c1f0ff");
+  background-size: cover;
+}
+
+.dark .hero {
+  background-image: url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=3cb3ba03a83bbf2690315283e9cd4115");
+}
+.dark h1, .dark p {
+  color: #fff;
+}
